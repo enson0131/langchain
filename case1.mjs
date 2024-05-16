@@ -1,4 +1,5 @@
-const { Ollama } = require('@langchain/community/llms/ollama');
+import { Ollama } from '@langchain/community/llms/ollama';
+import 'dotenv/config'
 
 const ollama = new Ollama({
   baseUrl: "http://localhost:11434", 
