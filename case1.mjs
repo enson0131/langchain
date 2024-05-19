@@ -10,3 +10,8 @@ const ollama = new Ollama({
 ollama.invoke("用中文讲一个笑话").then((res) => {
   console.log('res', res);
 });
+
+
+
+
+
