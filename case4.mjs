@@ -39,13 +39,13 @@ const chatPrompt2 = ChatPromptTemplate.fromMessages([
 ]);
 
 
-const outputPraser = new StringOutputParser(); // 输出字符串
+const outputParser = new StringOutputParser(); // 输出字符串
 const chatModel = new Ollama({
     baseUrl: "http://localhost:11434", 
     model: "llama3", 
 });
 
-const chain = chatPrompt2.pipe(chatModel).pipe(outputPraser);
+const chain = chatPrompt2.pipe(chatModel).pipe(outputParser);
 
 const res = await chain.invoke({
     source_lang: "中文",
