@@ -1,5 +1,3 @@
-// global.ReadableStream = require('web-streams-polyfill').ReadableStream; // issues: https://github.com/langchain-ai/langchainjs/issues/2815
-// import "web-streams-polyfill/es6"; // https://js.langchain.com/v0.1/docs/get_started/installation/#unsupported-nodejs-16
 import { Ollama } from '@langchain/community/llms/ollama';
 import { HumanMessage } from "@langchain/core/messages";
 import { StringOutputParser } from "@langchain/core/output_parsers";
