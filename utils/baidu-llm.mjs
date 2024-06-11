@@ -8,6 +8,7 @@ import { StringOutputParser } from "@langchain/core/output_parsers";
 const ernieTurbo = new ChatBaiduWenxin({
     baiduApiKey: process.env.BAIDU_API_KEY, // In Node.js defaults to process.env.BAIDU_API_KEY
     baiduSecretKey: process.env.BAIDU_SECRET_KEY, // In Node.js defaults to process.env.BAIDU_SECRET_KEY
+    modelName: process.env.BAIDU_MODEL_NAME, // In Node.js defaults to process.env.BAIDU_MODEL_NAME
 });
 
 // const messages = [

@@ -1,5 +1,4 @@
 import { GithubRepoLoader } from "langchain/document_loaders/web/github";
-import ignore from "ignore";
 
 const loader = new GithubRepoLoader(
     "https://github.com/RealKai42/qwerty-learner",
