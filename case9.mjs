@@ -2,7 +2,7 @@
 
 import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
 import { TextLoader } from "langchain/document_loaders/fs/text";
-import { PDFLoader } from "langchain/document_loaders/fs/pdf";
+import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
 
 const loader = new DirectoryLoader(
     "./data",
@@ -11,7 +11,7 @@ const loader = new DirectoryLoader(
       ".pdf": (path) => new PDFLoader(path, { splitPages: false }),
       ".txt": (path) => new TextLoader(path),
     }
-  );
-  const docs = await loader.load();
+);
+const docs = await loader.load();
 
-  console.log(docs); 
+console.log(docs); 
