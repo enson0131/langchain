@@ -21,7 +21,6 @@ const embedding = new BaiduQianfanEmbeddings(); // Embedding-V1是基于百度�
 
 const vectorStore = await FaissStore.fromDocuments(splitDocs, embedding);
 
-
 const retriever = vectorStore.asRetriever(2);
 const res = await retriever.invoke("茴香豆是做什么用的");
 
