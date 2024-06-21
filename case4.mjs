@@ -5,6 +5,9 @@ import { HumanMessagePromptTemplate } from "@langchain/core/prompts";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { Ollama } from '@langchain/community/llms/ollama';
+import 'dotenv/config';
+import baidu from './utils/baidu-llm.mjs';
+import alibaba from './utils/alibaba-llm.mjs';
 
 
 // 构建 system 角色，通常用于设置对话的上下文或指定模型采取特定的行为模式
@@ -45,7 +48,7 @@ const chatModel = new Ollama({
     model: "llama3", 
 });
 
-const chain = chatPrompt2.pipe(chatModel).pipe(outputParser);
+const chain = chatPrompt2.pipe(baidu).pipe(outputParser);
 
 const res = await chain.invoke({
     source_lang: "中文",

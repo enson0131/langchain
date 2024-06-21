@@ -1,7 +1,7 @@
 // Loader: langchain 提供了一系列的 Loader 加载不同的数据源
 import * as pdfParse from "pdf-parse";
 import { TextLoader } from "langchain/document_loaders/fs/text";
-import { PDFLoader } from "langchain/document_loaders/fs/pdf";
+import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
 
 const textLoader = new TextLoader("data/qiu.txt");
 

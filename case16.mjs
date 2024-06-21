@@ -8,6 +8,7 @@ import { ScoreThresholdRetriever } from "langchain/retrievers/score_threshold";
 import { LLMChainExtractor } from "langchain/retrievers/document_compressors/chain_extract";
 import { ContextualCompressionRetriever } from "langchain/retrievers/contextual_compression";
 import ernieTurbo from './utils/baidu-llm.mjs';
+import { AlibabaTongyiEmbeddings } from "@langchain/community/embeddings/alibaba_tongyi";
 process.env.LANGCHAIN_VERBOSE = "true"; // 显示调试信息
 
 const loader = new TextLoader('./data/kong.txt');
@@ -15,8 +16,8 @@ const loader = new TextLoader('./data/kong.txt');
 const docs = await loader.load();
 
 const splitter = new RecursiveCharacterTextSplitter({
-    chunkSize: 20, // 分块的大小
-    chunkOverlap: 0, // 块之间的重叠
+    chunkSize: 500, // 分块的大小
+    chunkOverlap: 100, // 块之间的重叠
 });
 
 const splitDocs = await splitter.splitDocuments(docs); // 对文章进行切片

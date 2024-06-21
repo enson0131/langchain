@@ -30,7 +30,7 @@ const vectorStore = await FaissStore.fromDocuments(splitDocs, embedding); // 从
 
 const retriever = vectorStore.asRetriever(2);
 
-const res = await retriever.invoke("原文中，谁提出了宏原子的假设？并详细介绍给我宏原子假设的理论")
+// const res = await retriever.invoke("原文中，谁提出了宏原子的假设？并详细介绍给我宏原子假设的理论")
 
 // console.log(`res`, res);
 
@@ -46,7 +46,7 @@ const contextRetriverChain = RunnableSequence.from([
 ])
 
 
-const result = await contextRetriverChain.invoke({ question: "原文中，谁提出了宏原子的假设？并详细介绍给我宏原子假设的理论"})
+// const result = await contextRetriverChain.invoke({ question: "原文中，谁提出了宏原子的假设？并详细介绍给我宏原子假设的理论"})
 
 // console.log(result)
 
