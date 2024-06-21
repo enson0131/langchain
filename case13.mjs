@@ -5,7 +5,7 @@ import { OpenAIEmbeddings } from "@langchain/openai";
 import { TextLoader } from "langchain/document_loaders/fs/text";
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import { BaiduQianfanEmbeddings } from "@langchain/community/embeddings/baidu_qianfan"; // 开通千帆 Embedding 模型, https://cloud.baidu.com/doc/VDB/s/Nltgvlg7k
-import { AlibabaTongyiEmbeddings } from "@langchain/community/embeddings/alibaba_tongyi";
+import { AlibabaTongyiEmbeddings } from "@langchain/community/embeddings/alibaba_tongyi"; // https://help.aliyun.com/zh/dashscope/developer-reference/text-embedding-quick-start?spm=a2c6h.12873639.article-detail.7.3398cddbexeUW2
 const loader = new TextLoader('./data/kong.txt');
 
 const docs = await loader.load();
