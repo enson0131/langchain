@@ -29,7 +29,7 @@ const compressor = LLMChainExtractor.fromLLM(ernieTurbo); // 从 LLM 模型中�
 
 const retriever = new ContextualCompressionRetriever({ // 通过 LLM 去生存不同的检索
     baseCompressor: compressor, // baseCompressor 根据用户的问题和 Document 对象的内容，进行核心信息的提取
-    baseRetriever: vectorStore.asRetriever(2),
+    baseRetriever: vectorStore.asRetriever(2), // asRetriever 返回的文档数量
 });
 
 const res = await retriever.invoke("茴香豆是做什么用的"); // 从检索中根据相关性提取信息

@@ -25,4 +25,3 @@ Node >= 18.0.0
 - 对接文心一言模型 https://js.langchain.com/v0.1/docs/integrations/chat/baidu_wenxin/
 - 段落分割 https://chunkviz.up.railway.app/
 - 通过 Faiss 创建向量数据库 https://js.langchain.com/v0.2/docs/integrations/vectorstores/faiss/#create-a-new-index-from-texts
-- 
