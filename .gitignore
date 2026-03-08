@@ -1,5 +1,17 @@
+# Python 虚拟环境
+venv/
+.venv/
+
+# 环境变量（含密钥，绝对不能提交）
+.env
 /npm-debug.log*
 /yarn-error.log
 node_modules/
 
-.env
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
