@@ -13,10 +13,11 @@ def get_weather(city: str) -> str:  # (1)!
 model = ChatTongyi(model="qwen3-max")  # (2)!
 
 agent = create_agent(
-    model=model,
-    tools=[get_weather],  # (3)!
-    system_prompt="You are a helpful assistant"  # (4)!
-)
+        model=model,
+        tools=[get_weather],  # (3)!
+        system_prompt="You are a helpful assistant"  # (4)!
+    )
+    
 
 # Run the agent
 result = agent.invoke(
