@@ -1,0 +1,11 @@
+{
+  "name": "bugfix-pipeline-demo",
+  "version": "1.0.0",
+  "description": "演示 Bug 修复流水线子代理",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node tests/services.test.js"
+  },
+  "keywords": ["demo", "subagent", "bugfix", "pipeline"],
+  "license": "MIT"
+}
